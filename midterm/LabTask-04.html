@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab task 04</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" />
+        <br />
+        <br />
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" />
+        <br />
+        <br />
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+        <br />
+        <br />
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" />
+        <br />
+        <br />
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Academic Information</legend>
+        <label for="dept">Department</label>
+        <select name="dept" id="dept">
+          <option value="cse">CSE</option>
+          <option value="eee">EEE</option>
+          <option value="BBA">BBA</option>
+          <option value="law">LAW</option>
+          <option value="english">English</option>
+        </select>
+        <br />
+        <br />
+        <label for="skills">Your skills</label>
+        <input type="checkbox" id="c++" name="skills" value="c++" />
+        <label for="c++">C++</label>
+        <input type="checkbox" id="c#" name="skills" value="c#" />
+        <label for="c#">C#</label>
+        <input type="checkbox" id="python" name="skills" value="python" />
+        <label for="python">Python</label>
+        <input
+          type="checkbox"
+          id="javaScript"
+          name="skills"
+          value="javaScript"
+        />
+        <label for="javaScript">JavaScript</label>
+        <input type="checkbox" id="Rust" name="skills" value="Rust" />
+        <label for="Rust">Rust</label>
+      </fieldset>
+      <br />
+      <button>Submit</button>
+      <button>Reset</button>
+    </form>
+  </body>
+</html>
