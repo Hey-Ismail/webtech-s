@@ -1,0 +1,52 @@
+h1,
+h2 {
+  color: blue;
+  text-align: center;
+}
+
+div p {
+  color: green;
+}
+
+input[type="text"] {
+  border: 2px solid black;
+}
+
+.a {
+  font-size: 18px;
+}
+
+.b {
+  font-size: 2em;
+}
+
+.c {
+  font-size: 2rem;
+}
+
+.box1 {
+  width: 50%;
+  background: lightgray;
+}
+
+.box2 {
+  height: 10vh;
+  background: lightyellow;
+}
+
+.cm {
+  margin-top: 1cm;
+}
+
+button:hover {
+  background: green;
+  color: white;
+}
+
+input:focus {
+  background: lightblue;
+}
+
+a:active {
+  color: red;
+}
