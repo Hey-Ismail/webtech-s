@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Lab Task 09</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f2f5f7;
+        color: #1f2933;
+      }
+
+      .container {
+        max-width: 760px;
+        margin: 30px auto;
+        padding: 20px;
+        width: min(760px, calc(100% - 40px));
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 1px solid #dce5eb;
+        border-radius: 12px;
+      }
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 18px;
+        font-size: 1.6rem;
+      }
+
+      .form-row,
+      .action-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      input,
+      button {
+        font-size: 1rem;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #b8c6d2;
+      }
+
+      input {
+        flex: 1 1 180px;
+      }
+
+      button {
+        background: #0d9488;
+        border-color: #0d9488;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        background: #94a3b8;
+        border-color: #94a3b8;
+        cursor: not-allowed;
+      }
+
+      #studentList {
+        list-style: none;
+        margin: 14px 0;
+        padding: 0;
+      }
+
+      .student-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 8px;
+        border: 1px solid #c6d4df;
+        border-radius: 10px;
+        background: #fbfdff;
+      }
+
+      .student-label {
+        font-weight: 600;
+      }
+
+      .present-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.95rem;
+      }
+
+      .item-actions {
+        display: flex;
+        gap: 6px;
+      }
+
+      .item-actions button {
+        background: #2563eb;
+        border-color: #2563eb;
+        padding: 6px 9px;
+        font-size: 0.9rem;
+      }
+
+      .item-actions .delete-btn {
+        background: #dc2626;
+        border-color: #dc2626;
+      }
+
+      .student-item.present {
+        background: #dcfce7;
+        border-color: #22c55e;
+        color: #166534;
+      }
+
+      .student-item.highlight {
+        border-width: 3px;
+        border-color: #f59e0b;
+      }
+
+      .stats {
+        margin: 6px 0;
+        font-weight: 600;
+      }
+
+      .page-footer {
+        margin-top: auto;
+        width: 100%;
+        padding: 14px 20px;
+        box-sizing: border-box;
+        text-align: center;
+        color: #334155;
+        font-size: 0.95rem;
+        letter-spacing: 0.2px;
+        background: transparent;
+        border-top: 1px solid #d1dbe4;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student List Manager</h1>
+
+      <div class="form-row">
+        <input type="text" id="rollInput" placeholder="Roll No." />
+        <input type="text" id="nameInput" placeholder="Student Name" />
+        <button id="addBtn" disabled>Add Student</button>
+      </div>
+
+      <div class="form-row">
+        <input type="text" id="searchInput" placeholder="Search student" />
+      </div>
+
+      <div class="action-row">
+        <button id="sortBtn">Sort A-Z</button>
+        <button id="highlightBtn">Highlight First Student</button>
+      </div>
+
+      <ul id="studentList"></ul>
+
+      <p id="totalText" class="stats">Total students: 0</p>
+      <p id="attendanceText" class="stats">Present: 0, Absent: 0</p>
+    </div>
+
+    <footer class="page-footer">
+      Made by Ismail Hossain Fahim Id : 23-50009-1
+    </footer>
+
+    <script src="LabTask-09.js"></script>
+  </body>
+</html>
