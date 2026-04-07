@@ -1,0 +1,167 @@
+/* retro font feel */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono&display=swap");
+
+:root {
+  --bg: #f4f1de;
+  --text: #222;
+  --primary: #e07a5f;
+  --card: #ffffff;
+}
+
+.dark {
+  --bg: #111;
+  --text: #f5f5f5;
+  --primary: #00ff9c;
+  --card: #1b1b1b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 8%;
+
+  border-bottom: 2px solid var(--primary);
+}
+
+.logo {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-family: "Press Start 2P";
+}
+
+#typing-text {
+  color: var(--primary);
+
+  height: 30px;
+}
+
+/* PROJECT */
+
+#projects h2,
+#contact h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.project-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+
+  padding: 40px 8%;
+}
+
+.card {
+  background: var(--card);
+
+  padding: 20px;
+
+  border: 2px solid var(--primary);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* CONTACT */
+
+form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  width: 300px;
+
+  margin: auto;
+}
+
+input,
+textarea {
+  padding: 10px;
+
+  border: 2px solid var(--primary);
+
+  background: none;
+
+  color: var(--text);
+}
+
+button {
+  padding: 10px;
+
+  background: var(--primary);
+
+  border: none;
+
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 30px;
+
+  border-top: 2px solid var(--primary);
+
+  margin-top: 50px;
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+}
