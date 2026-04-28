@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin: 0;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.welcome-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.welcome-section p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.info-section {
+  margin-bottom: 30px;
+}
+
+.info-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.info-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #667eea;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.info-label {
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  color: #333;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.stat-box {
+  background: #f0f4ff;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  color: #667eea;
+  font-size: 16px;
+  font-weight: bold;
+}
