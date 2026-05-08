@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Info AJAX Demo</title>
+    <link rel="stylesheet" href="stylee.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">HTML + JavaScript AJAX + PHP + JSON</p>
+        <h1>Fetch student information without reloading the page.</h1>
+        <p class="lead">
+          Click the button below to request JSON data from PHP and render the
+          student records neatly on the page.
+        </p>
+
+        <button id="loadStudentsBtn" type="button">Fetch Student Data</button>
+      </section>
+
+      <section class="output-card">
+        <div class="section-head">
+          <h2>Student Details</h2>
+          <p id="statusText">Press the button to load the JSON response.</p>
+        </div>
+
+        <div id="studentOutput" class="student-output" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
