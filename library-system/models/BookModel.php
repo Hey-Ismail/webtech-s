@@ -110,3 +110,6 @@ function book_delete($id)
 
     return $executed;
 }
+
+
+//git commit -m "Lab task -12"

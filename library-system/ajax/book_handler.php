@@ -28,3 +28,5 @@ switch ($action) {
 }
 
 echo json_encode($response);
+
+//git commit -m "Lab task -12"
