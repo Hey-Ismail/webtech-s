@@ -1,0 +1,232 @@
+:root {
+  --bg: #f4efe4;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-strong: #ffffff;
+  --text: #1f2a2e;
+  --muted: #5e6c73;
+  --primary: #134e4a;
+  --primary-dark: #0f3d3a;
+  --accent: #b45309;
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(19, 78, 74, 0.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(180, 83, 9, 0.14),
+      transparent 26%
+    ),
+    linear-gradient(180deg, #fbf7ef 0%, var(--bg) 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.4;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+.auth-shell,
+.dashboard-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card,
+.dashboard-card {
+  width: min(620px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.auth-copy h1,
+.dashboard-card h1 {
+  margin: 10px 0 12px;
+  color: #102a2a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.04;
+}
+
+.auth-copy p,
+.dashboard-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff2df;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  color: #24353c;
+  font-weight: 700;
+}
+
+.auth-form span {
+  font-size: 0.92rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  background: rgba(255, 255, 255, 0.96);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: rgba(19, 78, 74, 0.55);
+  box-shadow: 0 0 0 4px rgba(19, 78, 74, 0.12);
+}
+
+.auth-form button,
+.logout-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  box-shadow: 0 12px 24px rgba(19, 78, 74, 0.22);
+  text-decoration: none;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.auth-form button:hover,
+.logout-link:hover {
+  transform: translateY(-1px);
+}
+
+.alert {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.alert.error {
+  color: #991b1b;
+  background: #fde8e8;
+  border: 1px solid #fecaca;
+}
+
+.hint-box {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: #eef8f7;
+  color: #24504b;
+  border: 1px solid rgba(19, 78, 74, 0.16);
+}
+
+.session-panel {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(19, 78, 74, 0.06);
+  border: 1px solid rgba(19, 78, 74, 0.12);
+}
+
+.session-panel span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.session-panel strong {
+  color: #102a2a;
+  word-break: break-word;
+}
+
+.logout-link {
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .auth-card,
+  .dashboard-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .auth-shell,
+  .dashboard-shell {
+    padding: 14px;
+  }
+}
